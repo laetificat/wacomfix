@@ -1,0 +1,19 @@
+#!/bin/bash
+# Sometimes the Wacom Bamboo Pen and Touch
+# uses the standard (wrong) settings like
+# enabling touch.
+# Running this script will turn it back off.
+#
+# Best usage: Put it in your bin folder
+# your $PATH variable includes and just run
+# wacom.
+#
+# This script is only tested on Fedora 20
+# with a Bamboo Pen and Touch.
+
+xsetwacom --set "Wacom Bamboo 16FG 4x5 Pen stylus" TabletPCButton "on"
+xsetwacom --set "Wacom Bamboo 16FG 4x5 Finger touch" touch off
+
+echo "Wacom settings are reset!"
+
+exit 0
